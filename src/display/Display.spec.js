@@ -10,10 +10,13 @@ test('displays if gate is opened/closed and if it is locked/unlocked', () => {
     
 
     const { getByText } = render(<Display />)
-    const unLockedClass = getByText(/Unlocked/i)
-    const openClass = getByText(/Open/i)
+     getByText(/Unlocked/i)
+     getByText(/Open/i)
 })
 
-const { getByText } = render(<Display closed={true} unlocked={false}/>)
-const closedClass = getByText(/Closed/i)
-const lockedClass = getByText(/Locked/i)
+test('display closed is true and unlocked is false', () => {
+
+    const { getByText } = render(<Display closed={true} unlocked={false}/>)
+  getByText(/Closed/i)
+  getByText(/Locked/i)
+})
