@@ -13,6 +13,8 @@ test('dashboard renders', () => {
 
 test('contains controls and displays in dashboard component', () => {
     const { getByText } = render(<Dashboard />);
-    // getByText(<Controls/>);
-    getByText(/displays/i);
+    getByText(/lock gate/i);
+    getByText(/close gate/i);
+    getByText(/unlocked/i);
+    getByText(/open/i);
 });
